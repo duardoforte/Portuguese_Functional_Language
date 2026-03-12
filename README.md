@@ -9,7 +9,7 @@ Apresento nesse repositório uma linguagem de programação protótipo desenvolv
 
 Você pode testar a linguagem diretamente no **ANTLR Lab**, sem instalar nada, acessando o link:
 
-👉 [http://lab.antlr.org/](http://lab.antlr.org/)
+👉 ➤ [http://lab.antlr.org/](http://lab.antlr.org/)
 
 ### Etapas:
 
