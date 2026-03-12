@@ -1,0 +1,39 @@
+parser grammar FuncionalPTParser;
+options { tokenVocab=FuncionalPTLexer; }
+// Programa: lista de statements
+programa : stmt* EOF ;
+stmt
+: definicao SEMI
+| expressao SEMI
+;
+// funcao nome arg1 arg2 ... -> expr
+definicao : FUNCAO ID ID* SETA expressao ;
+// Expressões com precedência (resolve o “não funciona” clássico)
+expressao : ifExpr ;
+ifExpr
+: SE expressao ENTAO expressao SENAO expressao
+| relExpr
+;
+// Relacionais (==, !=, <, <=, >, >=)
+relExpr
+: somaExpr ((IGUAL | DIF | MENOR | MENOR_IGUAL | MAIOR | MAIOR_IGUAL) somaExpr)*
+;
+// + e -
+somaExpr
+: multExpr ((OP_SOMA | OP_SUB) multExpr)*
+
+;
+// * e /
+multExpr
+: atom ((OP_MULT | OP_DIV) atom)*
+;
+// átomos
+atom
+: OP_SUB atom
+| OP_SOMA atom
+| NUM_REAL
+| NUM_INT
+| TEXTO
+| ID
+| LPAREN expressao RPAREN
+;
