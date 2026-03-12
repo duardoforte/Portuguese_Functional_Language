@@ -1,8 +1,7 @@
 
 # PortugueseLanguage
 
-Apresento nesse repositório uma linguagem de programação protótipo desenvolvida para o estudo da disciplina de Compiladores e Interpretadores na minha universidade.  
-O projeto usa de um **analisador léxico** e um **analisador sintático** utilizando [ANTLR 4](https://www.antlr.org/), com suporte a variáveis, expressões, condicionais, laços (`for`, `while`, `do/while`) e funções com `return`.
+Apresento nesse repositório uma linguagem de programação protótipo desenvolvida para o estudo da disciplina de Compiladores e Interpretadores na minha universidade. O projeto usa de um **analisador léxico** e um **analisador sintático** utilizando [ANTLR 4](https://www.antlr.org/), com suporte a variáveis, expressões, condicionais, laços (`for`, `while`, `do/while`) e funções com `return`.
 
 ---
 
